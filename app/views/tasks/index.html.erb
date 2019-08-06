@@ -1,0 +1,5 @@
+<h1>Liste de tâches</h1>
+
+<% @tasks.each do |task| %>
+<p>Tache : <%= link_to task.title, task_path(task) %> - Completed : <%= task.completed == true ? "Finished !" : "Nope" %></p>
+<% end %>
